@@ -1,0 +1,106 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ask TapIsLit</title>
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg,#0f172a,#1e293b);
+    color:white;
+    text-align:center;
+    padding-top:120px;
+}
+
+h1{
+    font-size:40px;
+    margin-bottom:30px;
+}
+
+input{
+    padding:12px;
+    width:320px;
+    border-radius:8px;
+    border:none;
+    font-size:16px;
+}
+
+button{
+    padding:12px 20px;
+    border:none;
+    border-radius:8px;
+    background:#6366f1;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    margin-left:10px;
+}
+
+button:hover{
+    background:#4f46e5;
+}
+
+#status{
+    margin-top:40px;
+    font-size:22px;
+    min-height:40px;
+}
+
+#answer{
+    margin-top:20px;
+    font-size:28px;
+    font-weight:bold;
+    color:#f87171;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Ask Anything LOL</h1>
+
+<input id="question" placeholder="Type your question...">
+<button onclick="ask()">Ask</button>
+
+<div id="status"></div>
+<div id="answer"></div>
+
+<script>
+
+function ask(){
+
+const steps = [
+"Asking TapIsLit...",
+"Going through Dark Ninja's brain...",
+"Bullying Shariff...",
+"Thinking really hard..."
+];
+
+let i = 0;
+
+document.getElementById("answer").textContent="";
+
+function nextStep(){
+
+if(i < steps.length){
+document.getElementById("status").textContent = steps[i];
+i++;
+setTimeout(nextStep,1500);
+}
+else{
+document.getElementById("status").textContent="";
+document.getElementById("answer").textContent="go fuck yourself";
+}
+
+}
+
+nextStep();
+
+}
+
+</script>
+
+</body>
+</html>
+```
